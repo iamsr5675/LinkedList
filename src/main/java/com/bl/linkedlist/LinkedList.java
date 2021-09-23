@@ -46,6 +46,13 @@ public class LinkedList {
 		newNode.setNext(temporaryNode);
 	}
 	
+	public INode deleteFirst() {
+		INode temporaryNode = this.head;
+		this.head = this.head.getNext();
+		return temporaryNode;
+		
+	}
+	
 	public void printLinkedList () {
 		System.out.println("My Nodes: "+head);
 	}
