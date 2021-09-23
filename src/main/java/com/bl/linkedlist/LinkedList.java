@@ -64,6 +64,25 @@ public class LinkedList {
 		return temporaryNode;
 	}
 	
+	public INode search(int key) {
+		INode temporaryNode = head;
+		boolean isFound = false;
+		while (temporaryNode != null  && isFound == false) {
+			if(temporaryNode.getKey().equals(key)) {
+				isFound = true;
+			}
+			else {
+				
+				temporaryNode = temporaryNode.getNext();
+			}
+		}
+		if(isFound)
+			return temporaryNode;
+		else {
+			return head;
+		}
+	}
+	
 	public void printLinkedList () {
 		System.out.println("My Nodes: "+head);
 	}
