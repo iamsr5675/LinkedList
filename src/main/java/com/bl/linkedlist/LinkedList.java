@@ -40,6 +40,12 @@ public class LinkedList {
 		}
 	}
 	
+	public void insert(INode previousNode, INode newNode) {
+		INode temporaryNode = previousNode.getNext();
+		previousNode.setNext(newNode);
+		newNode.setNext(temporaryNode);
+	}
+	
 	public void printLinkedList () {
 		System.out.println("My Nodes: "+head);
 	}
