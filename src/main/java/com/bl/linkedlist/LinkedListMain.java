@@ -14,10 +14,8 @@ public class LinkedListMain {
 		
 		System.out.println("Linked list before deletion: ");
 		myLinkedList.printLinkedList();
-		INode deletedNode = myLinkedList.deleteFirst();
+		INode deletedNode = myLinkedList.deleteLastNode();
 		System.out.println("The deleted key value is:"+deletedNode.getKey());
-		System.out.println("Final linked list is:");
-		myLinkedList.printLinkedList();
 	}
 
 }

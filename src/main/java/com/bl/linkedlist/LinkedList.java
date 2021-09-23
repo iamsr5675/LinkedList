@@ -1,6 +1,7 @@
 package com.bl.linkedlist;
 
 public class LinkedList {
+	
 	private INode head;
 	private INode tail;
 	
@@ -51,6 +52,16 @@ public class LinkedList {
 		this.head = this.head.getNext();
 		return temporaryNode;
 		
+	}
+	
+	public INode deleteLastNode() {
+		INode temporaryNode = head;
+		while(!temporaryNode.getNext().equals(tail)) {
+			temporaryNode = temporaryNode.getNext();
+		}
+		this.tail = temporaryNode;
+		temporaryNode = temporaryNode.getNext();
+		return temporaryNode;
 	}
 	
 	public void printLinkedList () {
